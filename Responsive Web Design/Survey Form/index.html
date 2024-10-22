@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="styles.css" />
+        <title>Survey</title>
+    </head>
+    <body>
+        <h1 id="title"><u>Customer Satisfaction Survey</u></h1>
+        <p id="description">Please let us know if you found our service helpful by filling out this survey. All answers are greatly appreciated.</p>
+
+        <form id="survey-form">
+            <fieldset>
+                <label for="name" id="name-label">Name: 
+                    <input id="name" type="text" placeholder="Enter your name" required>
+                </label>
+                <label for="email" id="email-label">Email: 
+                    <input id="email" type="email" placeholder="Enter your email" required>
+                </label>
+                <label for="number" id="number-label">Rate is out of 1-10 (10 means your very satisfied): 
+                    <input id="number" type="number" min=1 max=10 placeholder="1-10" required>
+                </label>
+            </fieldset>
+
+            <fieldset>
+                <label for="dropdown">What is your current occupation:
+                    <select id="dropdown">
+                        <option value="">(Select an occupation)</option>
+                        <option value="1">Student</option>
+                        <option value="2">Front-end Developer</option>
+                        <option value="3">Back-end Developer</option>
+                        <option value="4">Software Engineer</option>
+                        <option value="5">Other</option>
+                        <option value="6">Prefer not to say</option>
+                    </select>
+                </label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Did you use our service for commercial purposes?</legend>
+                <label for="ans-yes">
+                    <input id="ans-yes" type="radio" name="answer" class="inline" value="yes">Yes
+                </label>
+                <label for="ans-no">
+                    <input id="ans-no" type="radio" name="answer" value="no" class="inline" checked>No
+                </label>
+            </fieldset>
+
+            <fieldset>
+                <legend>What parts of our service did you use?</legend>
+                <label>
+                    <input type="checkbox" value="url-short" class="inline"> URL Shortner
+                </label>
+                <label>
+                    <input type="checkbox" value="file-share" class="inline"> File Sharer
+                </label>
+                <label>
+                    <input type="checkbox" value="forums" class="inline"> Forums
+                </label>
+            </fieldset>
+
+            <fieldset>
+                <label>Anything you'd like to say to us?
+                    <textarea id="comments" placeholder="Enter your comments"></textarea>
+                </label>
+            </fieldset>
+
+            <input id="submit" type="submit" value="Submit">
+        </form>
+    </body>
+</html>
